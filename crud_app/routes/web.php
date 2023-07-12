@@ -33,7 +33,7 @@ Route::patch('/tareas/{id}', [ListaTareas::class, 'actualizar'])->name('tarea-up
 
 Route::delete('/tareas/{id}', [ListaTareas::class, 'eliminar'])->name('tarea-delete');
 
-//categorias-------------------------------
+//categorias------------------------------
 Route::get('/categorias', [categoriaController::class, 'index'])->name('categorias');
 
 Route::post('/categorias', [categoriaController::class, 'store'])->name('categorias');
