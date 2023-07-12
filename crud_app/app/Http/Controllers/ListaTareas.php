@@ -39,7 +39,8 @@ class ListaTareas extends Controller
 
 
         $tarea = tareas::find($id);
-        return view('tareas.editar', ['tarea' => $tarea]);
+        $categoria = categoria::all();
+        return view('tareas.editar', ['tarea' => $tarea, 'categoria' => $categoria]);
 
     }
     public function actualizar(Request $request, $id)
@@ -48,6 +49,7 @@ class ListaTareas extends Controller
 
         $tareas = tareas::find($id);
         $tareas->title = $request->title;
+        $tareas->categoria_id = $request->categoria_id;
         $tareas->save();
 
         return redirect()->route('tareas')->with('success', 'tarea actualizada exitosamente');

@@ -39,7 +39,7 @@
   <a href="{{route('tarea-update',['id'=>$tarea->id])}}">{{$tarea->title}}</a>
   </div>
     <div class="col-md-3 d-flex justify-content-end">
-    <form  method="POST" class="" action="{{route('categoria_delete',['id'=>$tarea->id])}})}}">
+    <form  method="POST" class="" action="{{route('tarea-delete',['id'=>$tarea->id])}})}}">
 
     @method('DELETE')
     @csrf

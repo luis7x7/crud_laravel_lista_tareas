@@ -74,7 +74,7 @@ class categoriaController extends Controller
     public function edit($id)
     {
 
-         
+
 
     }
 
@@ -105,7 +105,7 @@ class categoriaController extends Controller
     {
         $categoria_ = categoria::find($id);
         $categoria_->tareas()->each(function ($tarea) {
-$tarea->delete();
+            $tarea->delete();
         });
         $categoria_->delete();
         return redirect()->route('categorias')->with('success', 'tarea eliminada exitosamente');

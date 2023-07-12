@@ -3,7 +3,7 @@
 
 <div class="container w-25 border p-4">
 
-<form  method="POST" class="" action="{{route('categoria_update',['id'=>$tarea->id])}}">
+<form  method="POST" class="" action="{{route('tarea-update',['id'=>$tarea->id])}}">
 @method('patch')
 @csrf
 @if (session('success'))
@@ -19,6 +19,13 @@
     <input type="text" class="form-control" id="" name="title" value="{{$tarea->title}}">
     
   </div>
+  <select name="categoria_id" class="form-select">
+  @foreach($categoria as $categori)
+  <option value="{{$categori->id}}">{{$categori->nombre}}</option>
+  
+  @endforeach
+  </select>
+ <br>
  
   
   <button type="submit" class="btn btn-primary">actualizar tarea</button>
