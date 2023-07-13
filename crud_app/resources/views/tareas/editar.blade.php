@@ -15,7 +15,7 @@
 <h6 class="alert alert-danger">{{$message}}</h6>  
 @enderror
   <div class="mb-3">
-    <label for="title" class="form-label">Titulo de la tareas</label>
+    <label for="title" class="form-label">Titulo de la tarea</label>
     <input type="text" class="form-control" id="" name="title" value="{{$tarea->title}}">
     
   </div>
